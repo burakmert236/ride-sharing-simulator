@@ -1,0 +1,13 @@
+{
+  "type": "record",
+  "name": "RideAssignment",
+  "namespace": "com.burakmert.rides.avro",
+  "fields": [
+    { "name": "rideId", "type": "string" },
+    { "name": "riderId", "type": "string" },
+    { "name": "driverId", "type": "string" },
+    { "name": "pickup", "type": "string" },
+    { "name": "destination", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}
