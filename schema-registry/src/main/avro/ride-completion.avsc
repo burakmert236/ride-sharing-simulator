@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "name": "RideCompletion",
+  "namespace": "com.burakmert.rides.avro",
+  "fields": [
+    { "name": "rideId", "type": "string" },
+    { "name": "timestamp", "type": "long" }
+  ]
+}

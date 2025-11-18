@@ -1,0 +1,22 @@
+server:
+  port: 8112
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://burak:burak@mongo:27017/rides_query
+
+  kafka:
+    bootstrap-servers: kafka:9092
+    properties:
+      schema.registry.url: http://schema-registry:8081
+      specific.avro.reader: true
+    consumer:
+      group-id: ride-query-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+
+topics:
+  ride-requests: ride-requests
+  ride-assignments: ride-assignments
+  ride-completions: ride-completions

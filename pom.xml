@@ -19,6 +19,7 @@
         <module>schema-registry</module>
         <module>services/rider-service</module>
         <module>services/ride-command-service</module>
+        <module>services/ride-query-service</module>
     </modules>
 
     <properties>
