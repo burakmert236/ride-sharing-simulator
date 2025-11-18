@@ -20,6 +20,7 @@
         <module>services/rider-service</module>
         <module>services/ride-command-service</module>
         <module>services/ride-query-service</module>
+        <module>services/driver-service</module>
     </modules>
 
     <properties>

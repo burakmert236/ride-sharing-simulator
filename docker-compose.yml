@@ -114,6 +114,16 @@ services:
     ports:
       - "8112:8112"
 
+  driver-service:
+    build: ./services/driver-service
+    depends_on:
+      - kafka
+      - schema-registry
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8122:8122"
+
 volumes:
   postgres:
   mongo:

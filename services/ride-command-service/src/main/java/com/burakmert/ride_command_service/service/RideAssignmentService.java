@@ -50,4 +50,11 @@ public class RideAssignmentService {
                 .setTimestamp(Instant.now().toEpochMilli())
                 .build();
     }
+
+    public void completeRide(String rideId) {
+        RideEntity ride = rideRepository.findById(rideId).orElseThrow();
+
+        ride.setStatus(RideStatus.COMPLETED);
+        rideRepository.save(ride);
+    }
 }
